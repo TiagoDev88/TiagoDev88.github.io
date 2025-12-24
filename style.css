@@ -123,7 +123,9 @@ nav ul {
     list-style: none;
 }
 
-nav a {
+nav a,
+nav a:visited,
+nav a:active {
     text-decoration: none;
     color: var(--text-high);
     font-size: 0.85rem;
@@ -466,7 +468,9 @@ section {
     flex-wrap: wrap;
 }
 
-.btn {
+.btn,
+.btn:visited,
+.btn:active {
     display: inline-flex;
     align-items: center;
     padding: 1rem 2.5rem;

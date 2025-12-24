@@ -25,54 +25,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // Detect touch device
     const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-    // If it's a touch device, disable custom cursor functionality
     if (isTouch) {
         if (cursorDot) cursorDot.style.display = 'none';
         if (cursorOutline) cursorOutline.style.display = 'none';
         if (cursorGlow) cursorGlow.style.display = 'none';
-        document.body.classList.add('touch-device'); // Optional: Add a class to body for touch-specific styling
-        return; // Exit the cursor logic early
+        document.body.classList.add('touch-device');
+    } else {
+        // Only run cursor logic on non-touch devices
+        let mouseX = -100;
+        let mouseY = -100;
+
+        const pos = { dot: { x: mouseX, y: mouseY }, outline: { x: mouseX, y: mouseY }, glow: { x: mouseX, y: mouseY } };
+        const strength = { outline: 0.3, glow: 0.1 };
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            if (cursorDot) {
+                cursorDot.style.transform = `translate(${mouseX - 3}px, ${mouseY - 3}px)`;
+            }
+        });
+
+        const animateCursors = () => {
+            pos.outline.x += (mouseX - pos.outline.x) * strength.outline;
+            pos.outline.y += (mouseY - pos.outline.y) * strength.outline;
+            pos.glow.x += (mouseX - pos.glow.x) * strength.glow;
+            pos.glow.y += (mouseY - pos.glow.y) * strength.glow;
+
+            if (cursorOutline) cursorOutline.style.transform = `translate(${pos.outline.x - 15}px, ${pos.outline.y - 15}px)`;
+            if (cursorGlow) cursorGlow.style.transform = `translate(${pos.glow.x - 250}px, ${pos.glow.y - 250}px)`;
+
+            requestAnimationFrame(animateCursors);
+        };
+        animateCursors();
+
+        const interactables = document.querySelectorAll('a, button, .project-card, .btn');
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => cursorOutline.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hover'));
+        });
     }
-
-    let mouseX = -100;
-    let mouseY = -100;
-
-    const pos = { dot: { x: mouseX, y: mouseY }, outline: { x: mouseX, y: mouseY }, glow: { x: mouseX, y: mouseY } };
-
-    // Snappier strengths
-    const strength = { outline: 0.3, glow: 0.1 }; // Increased from 0.15 and 0.05
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-
-        // Update DOT instantly for zero lag perception
-        if (cursorDot) {
-            cursorDot.style.transform = `translate(${mouseX - 3}px, ${mouseY - 3}px)`;
-        }
-    });
-
-    const animateCursors = () => {
-        // Outline & Glow: Smooth but faster follow
-        pos.outline.x += (mouseX - pos.outline.x) * strength.outline;
-        pos.outline.y += (mouseY - pos.outline.y) * strength.outline;
-
-        pos.glow.x += (mouseX - pos.glow.x) * strength.glow;
-        pos.glow.y += (mouseY - pos.glow.y) * strength.glow;
-
-        if (cursorOutline) cursorOutline.style.transform = `translate(${pos.outline.x - 15}px, ${pos.outline.y - 15}px)`;
-        if (cursorGlow) cursorGlow.style.transform = `translate(${pos.glow.x - 250}px, ${pos.glow.y - 250}px)`;
-
-        requestAnimationFrame(animateCursors);
-    };
-    animateCursors();
-
-    // Hover states for magnetic effect
-    const interactables = document.querySelectorAll('a, button, .project-card, .btn');
-    interactables.forEach(el => {
-        el.addEventListener('mouseenter', () => cursorOutline.classList.add('hover'));
-        el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hover'));
-    });
 
     // 3. Precise Scroll Reveal
     const revealElements = document.querySelectorAll('.reveal');
