@@ -4,118 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiago Monteiro | Software Engineer - Performance & Systems</title>
+    <title>Tiago Monteiro | Software Engineer - Systems & Performance</title>
+
+    <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Software Engineer focused on high-performance systems in C, C++, and Rust. Portfolio of Tiago Monteiro, specialized in Unix systems and low-level development.">
+        content="Software Engineer student at 42 Porto, specializing in robust systems development in C, C++, and Rust. Focused on performance, Unix systems, and under-the-hood engineering.">
     <meta name="keywords"
-        content="Tiago Monteiro, Software Engineer, 42 School, C, C++, Rust, Unix, Performance, Systems Programming, Embedded Systems, Português, English">
+        content="Tiago Monteiro, Software Engineer, 42 Porto, C, C++, Rust, Unix, Performance, Systems Programming, Embedded Systems, Portfolio">
     <link rel="canonical" href="https://tiagomonteiro.me">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tiagomonteiro.me">
+    <meta property="og:url" content="https://tiagomonteiro.me/">
     <meta property="og:title" content="Tiago Monteiro | Software Engineer">
     <meta property="og:description"
-        content="Focused on high-performance systems in C, C++, and Rust. Building robust software under the hood.">
-    <meta property="og:image" content="https://tiagomonteiro.me/profile_headshot.png">
+        content="Mastering systems engineering and performance at 42 Porto. Specializing in C, C++, and Rust.">
+    <meta property="og:image" content="https://tiagomonteiro.me/assets/profile_headshot.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tiagomonteiro.me">
+    <meta property="twitter:url" content="https://tiagomonteiro.me/">
     <meta property="twitter:title" content="Tiago Monteiro | Software Engineer">
     <meta property="twitter:description"
-        content="Focused on high-performance systems in C, C++, and Rust. Building robust software under the hood.">
-    <meta property="twitter:image" content="https://tiagomonteiro.me/profile_headshot.png">
+        content="Mastering systems engineering and performance at 42 Porto. Specializing in C, C++, and Rust.">
+    <meta property="twitter:image" content="https://tiagomonteiro.me/assets/profile_headshot.png">
 
+    <!-- Assets -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Tiago Monteiro",
-      "jobTitle": "Software Engineer",
-      "url": "https://tiagomonteiro.me",
-      "sameAs": [
-        "https://github.com/TiagoDev88",
-        "https://linkedin.com/in/tiagomonteiro-dev"
-      ],
-      "knowsAbout": ["C", "C++", "Rust", "Unix Systems", "Performance Optimization", "Shell Scripting"]
-    }
-    </script>
 </head>
 
 <body>
+    <div id="blueprint-grid"></div>
     <div class="noise"></div>
-    <div class="scanlines"></div>
-    <div id="cursor-glow"></div>
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
 
     <header>
         <a href="#" class="logo">TM</a>
         <nav>
             <ul>
-                <li><a href="#about"><span class="pt-only">Sobre</span><span class="en-only">About</span></a></li>
-                <li><a href="#projects"><span class="pt-only">Projetos</span><span class="en-only">Projects</span></a>
-                </li>
-                <li><a href="#contact"><span class="pt-only">Contacto</span><span class="en-only">Contact</span></a>
+                <li><a href="#about"><i class="fas fa-user-circle"></i> <span class="pt-only">Sobre</span><span
+                            class="en-only">About</span></a></li>
+                <li><a href="#projects"><i class="fas fa-code-branch"></i> <span class="pt-only">Projetos</span><span
+                            class="en-only">Projects</span></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> <span class="pt-only">Contacto</span><span
+                            class="en-only">Contact</span></a></li>
+                <li class="nav-socials">
+                    <a href="https://github.com/TiagoDev88" target="_blank"><i class="devicon-github-original"></i></a>
+                    <a href="https://linkedin.com/in/tiagodev88" target="_blank"><i
+                            class="devicon-linkedin-plain"></i></a>
                 </li>
             </ul>
         </nav>
         <div class="lang-toggle">
             <button class="lang-btn active" data-lang="pt">PT</button>
+            <div class="divider"></div>
             <button class="lang-btn" data-lang="en">EN</button>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="label reveal">
-                <span class="pt-only">CONSTRUINDO O FUTURO</span>
-                <span class="en-only">BUILDING THE FUTURE</span>
-            </div>
-            <h1 class="reveal">Tiago Monteiro.</h1>
-            <h2 class="reveal">
-                <span class="pt-only">Excelência em Performance e Sistemas.</span>
-                <span class="en-only">Excellence in Performance & Systems.</span>
-            </h2>
+        <section id="hero" class="hero">
+            <h1 class="reveal">TIAGO <span class="shake-target">MONTEIRO</span></h1>
             <div class="reveal">
-                <p class="pt-only">Sou um Software Engineer em formação na 42 School, especializado no desenvolvimento
-                    de software robusto e eficiente em C, C++ e Rust. Focado no que acontece debaixo do capô.</p>
-                <p class="en-only">I am a Software Engineer student at 42 School, specialized in developing robust and
-                    efficient software in C, C++, and Rust. Focused on what happens under the hood.</p>
-            </div>
-            <div class="reveal">
-                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-                    <a href="#projects" class="btn">
-                        <span class="pt-only">Ver Projetos</span>
-                        <span class="en-only">View Projects</span>
-                    </a>
-                    <a href="https://github.com/TiagoDev88" target="_blank" class="btn"
-                        style="background: transparent; border-color: rgba(255,255,255,0.2); color: white;">
-                        <i class="devicon-github-original" style="margin-right: 10px;"></i>
-                        <span>GitHub</span>
-                    </a>
+                <h2 style="font-family: var(--font-heading); font-style: italic; opacity: 0.9;">
+                    <span class="pt-only">Software Engineer focado em Performance, Sistemas Unix e Engenharia de Baixo
+                        Nível</span>
+                    <span class="en-only">Software Engineer focused on Performance, Unix Systems and Low-Level
+                        Engineering</span>
+                </h2>
+                <p class="pt-only"
+                    style="color: var(--acc-emerald); font-family: var(--font-mono); font-weight: 700; margin-bottom: 2rem; letter-spacing: 2px;">
+                    ESTUDANTE DA 42 PORTO // PORTUGAL
+                </p>
+                <p class="en-only"
+                    style="color: var(--acc-emerald); font-family: var(--font-mono); font-weight: 700; margin-bottom: 2rem; letter-spacing: 2px;">
+                    42 PORTO STUDENT // PORTUGAL
+                </p>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p class="pt-only">Sou um Software Engineer em formação na 42 Porto, especializado no
+                        desenvolvimento
+                        de software robusto e eficiente em C, C++ e Rust. Focado no que acontece debaixo do capô.</p>
+                    <p class="en-only">I am a Software Engineer student at 42 Porto, specialized in developing robust
+                        and
+                        efficient software in C, C++, and Rust. Focused on what happens under the hood.</p>
                 </div>
+            </div>
+
+            <div class="reveal" style="margin-top: 3rem; display: flex; gap: 2.5rem;">
+                <a href="#projects" class="btn primary">
+                    <span class="pt-only">Ver Projetos</span>
+                    <span class="en-only">View Projects</span>
+                </a>
+                <a href="https://github.com/TiagoDev88" target="_blank" class="btn secondary">
+                    <i class="devicon-github-original"></i> GitHub
+                </a>
             </div>
         </section>
 
-        <!-- About Me Section -->
+        <!-- About Section -->
         <section id="about">
             <div class="section-title reveal">
                 <span class="pt-only">01. Sobre Mim</span>
                 <span class="en-only">01. About Me</span>
             </div>
-            <div class="about-grid reveal">
-                <div class="about-text">
+
+            <div class="about-grid">
+                <div class="about-content reveal">
                     <div class="pt-only">
                         <p>A minha paixão pela tecnologia começou com a curiosidade de entender como as coisas funcionam
-                            "debaixo do capô". Essa curiosidade levou-me até à <strong>42 School</strong>, onde
+                            "debaixo do capô". Essa curiosidade levou-me até à <strong>42 Porto</strong>, onde
                             encontrei um sistema de aprendizagem baseado em projetos que desafiou a minha lógica e
                             aumentou a minha autonomia.</p>
                         <p>Não me considero apenas um programador; vejo-me como alguém que gosta de resolver problemas
@@ -128,7 +130,7 @@
                     </div>
                     <div class="en-only">
                         <p>My passion for technology started with the curiosity of understanding how things work "under
-                            the hood". This curiosity led me to <strong>42 School</strong>, where I found a
+                            the hood". This curiosity led me to <strong>42 Porto</strong>, where I found a
                             project-based learning system that challenged my logic and boosted my autonomy.</p>
                         <p>I don't see myself as just a coder; I see myself as someone who loves solving complex
                             problems. My time at 42 has been a journey of dedication, where I learned that patience and
@@ -139,48 +141,38 @@
                         </p>
                     </div>
 
-                    <ul class="skills-list">
-                        <li><i class="devicon-c-plain"></i> C</li>
-                        <li><i class="devicon-cplusplus-plain"></i> C++</li>
-                        <li><i class="devicon-rust-original"></i> Rust</li>
-                        <li><i class="devicon-bash-plain"></i> Shell / Scripting</li>
-                        <li><i class="devicon-cmake-plain"></i> Makefile / Build</li>
-                        <li><i class="devicon-linux-plain"></i> Unix Systems</li>
-                    </ul>
-                    <div class="mindset-wrap reveal" style="margin-top: 4rem;">
-                        <h4
-                            style="color: var(--acc-emerald); margin-bottom: 1.5rem; font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">
-                            <span class="pt-only">Engineering Mindset</span>
-                            <span class="en-only">Engineering Mindset</span>
-                        </h4>
-                        <div class="mindset-grid">
-                            <div class="mindset-item">
-                                <i class="fas fa-brain"></i>
-                                <span class="pt-only">Autonomia (42 School)</span>
-                                <span class="en-only">Autonomy (42 School)</span>
-                            </div>
-                            <div class="mindset-item">
-                                <i class="fas fa-microscope"></i>
-                                <span class="pt-only">Rigor Técnico</span>
-                                <span class="en-only">Technical Rigor</span>
-                            </div>
-                            <div class="mindset-item">
-                                <i class="fas fa-users"></i>
-                                <span class="pt-only">Colaboração de Pares</span>
-                                <span class="en-only">Peer Collaboration</span>
-                            </div>
-                            <div class="mindset-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <span class="pt-only">Resiliência</span>
-                                <span class="en-only">Resilience</span>
-                            </div>
+                    <!-- Terminal Feature -->
+                    <div class="terminal-about reveal" style="margin-top: 2rem;">
+                        <div class="terminal-header">
+                            <div class="dots"><span class="dot-r"></span><span class="dot-y"></span><span
+                                    class="dot-g"></span></div>
+                            <div class="terminal-title">tiago@cyber ~ /about</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div><span class="line">$</span> whoami</div>
+                            <div class="out">Tiago Monteiro</div>
+                            <div><span class="line">$</span> cat education.txt</div>
+                            <div class="out">42 Porto - Portugal</div>
+                            <div><span class="line">$</span> ls skills/</div>
+                            <div class="out">C/ C++/ Unix/ Rust/ Bash/ Git/ Makefile</div>
+                            <div><span class="line">$</span> cat focus.txt</div>
+                            <div class="out">Systems Programming | Performance | Security</div>
+                            <div><span class="line">$</span> <span class="blink-cursor"></span></div>
                         </div>
                     </div>
+
+                    <ul class="skills-list reveal">
+                        <li><i class="devicon-c-plain"></i> C / System</li>
+                        <li><i class="devicon-cplusplus-plain"></i> C++ / OOP</li>
+                        <li><i class="devicon-rust-original"></i> Rust / Security</li>
+                        <li><i class="devicon-linux-plain"></i> Unix Systems</li>
+                        <li><i class="devicon-bash-plain"></i> Shell Scripting</li>
+                        <li><i class="devicon-cmake-plain"></i> Makefile / Automation</li>
+                    </ul>
                 </div>
-                <div class="profile-wrap">
-                    <div class="profile-inner">
-                        <img src="assets/profile_headshot.png" alt="Tiago Monteiro" class="profile-img">
-                    </div>
+
+                <div class="profile-wrap reveal">
+                    <img src="assets/profile_headshot.png" alt="Tiago Monteiro" class="profile-img">
                 </div>
             </div>
         </section>
@@ -188,8 +180,8 @@
         <!-- Projects Section -->
         <section id="projects">
             <div class="section-title reveal">
-                <span class="pt-only">02. Experiência Técnica</span>
-                <span class="en-only">02. Technical Experience</span>
+                <span class="pt-only">// ROOT / PROJETOS</span>
+                <span class="en-only">// ROOT / PROJECTS</span>
             </div>
             <div class="projects-grid">
                 <!-- Minishell -->
@@ -202,8 +194,8 @@
                         parsing.</p>
                     <div class="project-tags">
                         <span><i class="devicon-c-plain"></i> C</span>
-                        <span><i class="devicon-bash-plain"></i> Shell</span>
-                        <span><i class="devicon-cmake-plain"></i> Makefile</span>
+                        <span><i class="devicon-bash-plain"></i> Bash</span>
+                        <span><i class="devicon-cmake-plain"></i> Make</span>
                     </div>
                 </a>
                 <!-- Cub3d -->
@@ -215,7 +207,8 @@
                     <p class="en-only">3D raycasting engine inspired by Wolfenstein 3D. Mathematical optimization.</p>
                     <div class="project-tags">
                         <span><i class="devicon-c-plain"></i> C</span>
-                        <span><i class="devicon-cmake-plain"></i> Makefile</span>
+                        <span>Raycasting</span>
+                        <span><i class="devicon-cmake-plain"></i> Make</span>
                     </div>
                 </a>
                 <!-- Push Swap -->
@@ -226,7 +219,8 @@
                     <p class="en-only">Stack sorting algorithm focused on minimal complexity.</p>
                     <div class="project-tags">
                         <span><i class="devicon-c-plain"></i> C</span>
-                        <span><i class="devicon-cmake-plain"></i> Makefile</span>
+                        <span>Algorithms</span>
+                        <span><i class="devicon-cmake-plain"></i> Make</span>
                     </div>
                 </a>
                 <!-- Scripthash -->
@@ -237,7 +231,7 @@
                     <p class="en-only">Rust tool for file hashing and integrity verification.</p>
                     <div class="project-tags">
                         <span><i class="devicon-rust-original"></i> Rust</span>
-                        <span><i class="devicon-bash-plain"></i> Shell</span>
+                        <span>Security</span>
                     </div>
                 </a>
                 <!-- So Long -->
@@ -248,7 +242,8 @@
                     <p class="en-only">2D game focused on graphical rendering and system input management.</p>
                     <div class="project-tags">
                         <span><i class="devicon-c-plain"></i> C</span>
-                        <span><i class="devicon-cmake-plain"></i> Makefile</span>
+                        <span>Graphics</span>
+                        <span><i class="devicon-cmake-plain"></i> Make</span>
                     </div>
                 </a>
                 <!-- BoostFps -->
@@ -258,56 +253,61 @@
                     <p class="pt-only">Automação de sistema para otimização de performance e tuning de latência.</p>
                     <p class="en-only">System automation for performance optimization and latency tuning.</p>
                     <div class="project-tags">
-                        <span><i class="devicon-bash-plain"></i> Shell</span>
-                        <span>Tuning</span>
+                        <span><i class="devicon-bash-plain"></i> Shell Tuning</span>
+                        <span>Linux</span>
                     </div>
                 </a>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
-            <div class="contact-card reveal">
-                <div class="label">
-                    <span class="pt-only">VAMOS CONVERSAR</span>
-                    <span class="en-only">LET'S CONNECT</span>
-                </div>
-                <h2>
-                    <span class="pt-only">Pronto para dar o próximo passo?</span>
-                    <span class="en-only">Ready to take the next step?</span>
-                </h2>
-                <p class="pt-only">Especialista em resolver problemas de baixo nível com foco em performance e qualidade
-                    de código.</p>
-                <p class="en-only">Low-level problem solver focused on high-performance and code quality.</p>
+        <section id="contact" class="contact-section">
+            <div class="section-title reveal" style="justify-content: center;">
+                <span class="prompt">></span>
+                <span class="pt-only">Contacto</span>
+                <span class="en-only">Contact</span>
+            </div>
 
-                <div class="contact-actions">
-                    <a href="mailto:tiago@tiagomonteiro.me" class="btn primary">
-                        <i class="fas fa-envelope"></i>
-                        <span class="pt-only">Enviar Email</span>
-                        <span class="en-only">Send Message</span>
+            <div class="contact-container reveal">
+                <div class="contact-grid">
+                    <!-- GitHub -->
+                    <a href="https://github.com/TiagoDev88" target="_blank" class="contact-card reveal">
+                        <div class="contact-icon"><i class="devicon-github-original"></i></div>
+                        <div class="contact-meta">
+                            <label>GitHub</label>
+
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
                     </a>
-                    <a href="https://linkedin.com/in/tiagodev88" target="_blank" class="btn secondary">
-                        <i class="devicon-linkedin-plain"></i>
-                        <span>LinkedIn</span>
+
+                    <!-- LinkedIn -->
+                    <a href="https://linkedin.com/in/tiagodev88" target="_blank" class="contact-card reveal">
+                        <div class="contact-icon"><i class="devicon-linkedin-plain"></i></div>
+                        <div class="contact-meta">
+                            <label>LinkedIn</label>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
                     </a>
-                    <!-- <a href="#" class="btn outline" title="falta colocar aqui o link do meu cv">
-                        <i class="fas fa-file-download"></i>
-                        <span class="pt-only">Download CV</span>
-                        <span class="en-only">Download CV</span>
-                    </a> -->
                 </div>
+
+                <div class="contact-echo reveal">
+                    <span class="prompt">$</span>
+                    <span class="pt-only">echo "Disponível para novas oportunidades"</span>
+                    <span class="en-only">echo "Available for new opportunities"</span>
+                </div>
+
+                <a href="mailto:tiago@tiagomonteiro.me" class="contact-cta-btn reveal">
+                    <i class="fas fa-paper-plane"></i>
+                    <span class="pt-only">Enviar Mensagem</span>
+                    <span class="en-only">Send Message</span>
+                </a>
             </div>
         </section>
     </main>
 
-    <footer style="padding: 4rem 15%; text-align: center; border-top: 1px solid var(--glass-border);">
-        <div style="margin-bottom: 2rem;">
-            <a href="https://github.com/TiagoDev88" target="_blank"
-                style="color: var(--acc-emerald); font-size: 1.5rem; text-decoration: none;">
-                <i class="devicon-github-original"></i>
-            </a>
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-low);">Built by Tiago Monteiro &copy; 2025</p>
+    <footer
+        style="padding: 4rem; text-align: center; border-top: 1px solid var(--glass-border); opacity: 0.5; font-family: var(--font-mono); font-size: 0.8rem;">
+        TIAGO_MONTEIRO // &copy; 2025 // SYSTEM_UP
     </footer>
 
     <script src="script.js"></script>
